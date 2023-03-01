@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
       title: 'Lars Franke',
       theme: ThemeData(
 
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.indigo,
       ),
+
       home: const MyHomePage(title: 'Portfolio - Mock Up'),
     );
   }
@@ -38,22 +39,63 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
 
-    );
+      ),
+      backgroundColor: Colors.white12,
+      body: SingleChildScrollView(
+        child: Center(
+          child: Column(
+            children: [
+              Stack(children: [
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 300,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                      Colors.lightGreen,
+                      Colors.lightBlueAccent,
+                    ],
+                  ),
+                ),
+            ),
+                Column(
+                  children: [
+                    SizedBox(height: 200,),
+                CircleAvatar(
+                  radius: 150,
+                  backgroundImage: AssetImage("images/kek.jpg"),
+                ),
+
+              ]
+              ),
+
+]),
+              Row(
+                children: [
+                  Container(
+                    width: 250,
+                    height: 250,
+                    color: Colors.brown,
+                  ),
+                  Container(
+                    width: 250,
+                    height: 250,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    width: 250,
+                    height: 250,
+                    color: Colors.brown,
+                  ),
+                  ],
+              )
+            ,
+
+      ]),),
+
+    ));
   }
 }
