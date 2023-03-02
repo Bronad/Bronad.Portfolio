@@ -75,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
 ]),
               Row(
                 children: [
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.15,),
                   Container(
                     width: 250,
                     height: 250,
@@ -90,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     height: 250,
                     color: Colors.brown,
                   ),
+                  SizedBox(width: MediaQuery.of(context).size.width * 0.15,)
                   ],
               )
             ,
