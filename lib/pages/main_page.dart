@@ -1,10 +1,7 @@
 import 'dart:html';
 
-import 'package:async_redux/async_redux.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:webapp/model/map_model.dart';
-import 'package:webapp/state/app_state.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);

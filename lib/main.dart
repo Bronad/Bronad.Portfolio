@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
 
       ),
-      backgroundColor: Colors.white12,
+      backgroundColor: Colors.black54,
       body: SingleChildScrollView(
         child: Center(
           child: Column(
@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     end: Alignment.bottomLeft,
                     colors: [
                       Colors.lightGreen,
+                      Colors.orangeAccent,
                       Colors.lightBlueAccent,
                     ],
                   ),
@@ -64,10 +65,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 Column(
                   children: [
                     SizedBox(height: 200,),
-                CircleAvatar(
+                Row(children: [
+                  SizedBox(width: 20,),
+                    CircleAvatar(
                   radius: 150,
                   backgroundImage: AssetImage("images/kek.jpg"),
-                ),
+                ),])
 
               ]
               ),
@@ -93,8 +96,30 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   SizedBox(width: MediaQuery.of(context).size.width * 0.15,)
                   ],
-              )
-            ,
+              ),
+      Container(
+      width: 250,
+      height: 250,
+      color: Colors.brown,
+    ),
+    Container(
+    width: 250,
+    height: 250,
+    color: Colors.brown,
+    ),Container(
+      width: 250,
+      height: 250,
+      color: Colors.brown,
+    ),Container(
+      width: 250,
+      height: 250,
+      color: Colors.brown,
+    ),Container(
+      width: 250,
+      height: 250,
+      color: Colors.brown,
+    ),
+
 
       ]),),
 
