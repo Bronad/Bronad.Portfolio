@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:folio/configs/configs.dart';
-import 'package:folio/constants.dart';
-import 'package:folio/provider/app_provider.dart';
-
-import 'package:provider/provider.dart';
 
 class ProjectCard extends StatefulWidget {
   final String? banner;
@@ -31,7 +26,6 @@ class ProjectCardState extends State<ProjectCard> {
 
   @override
   Widget build(BuildContext context) {
-    final appProvider = Provider.of<AppProvider>(context);
 
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
@@ -40,11 +34,6 @@ class ProjectCardState extends State<ProjectCard> {
       hoverColor: Colors.transparent,
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
-      onTap: widget.projectLink == null
-          ? () {}
-          : () => openURL(
-        widget.projectLink!,
-      ),
       onHover: (isHovering) {
         if (isHovering) {
           setState(() {
@@ -57,29 +46,20 @@ class ProjectCardState extends State<ProjectCard> {
         }
       },
       child: Container(
-        margin: Space.h,
-        padding: Space.all(),
-        width: AppDimensions.normalize(150),
-        height: AppDimensions.normalize(90),
+
         decoration: BoxDecoration(
-          color: appProvider.isDark ? Colors.grey[900] : Colors.white,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: isHover
-              ? [
-            BoxShadow(
-              color: AppTheme.c!.primary!.withAlpha(100),
-              blurRadius: 12.0,
-              offset: const Offset(0.0, 0.0),
-            )
-          ]
-              : [
-            BoxShadow(
-              color: Colors.black.withAlpha(100),
-              blurRadius: 12.0,
-              offset: const Offset(0.0, 0.0),
-            )
-          ],
-        ),
+        //   boxShadow:
+        //     BoxShadow(
+        //       color: Colors.white30,
+        //       blurRadius: 12.0,
+        //       offset: const Offset(0.0, 0.0),
+        //     ),
+        // )
+      )
+
+        ,
         child: Stack(
           fit: StackFit.expand,
           children: [
@@ -104,7 +84,7 @@ class ProjectCardState extends State<ProjectCard> {
                     ),
                     Text(
                       widget.projectTitle,
-                      style: AppText.b2b,
+                      //style: AppText.b2b,
                       textAlign: TextAlign.center,
                     ),
                   ],
@@ -113,7 +93,7 @@ class ProjectCardState extends State<ProjectCard> {
                 widget.projectIconData != null
                     ? Icon(
                   widget.projectIconData,
-                  color: AppTheme.c!.primary!,
+                  //color: AppTheme.c!.primary!,
                   size: height * 0.1,
                 )
                     : Container(),
@@ -125,7 +105,7 @@ class ProjectCardState extends State<ProjectCard> {
                 (width > 1135 || width < 950)
                     ? Text(
                   widget.projectTitle,
-                  style: AppText.b2b,
+                  //style: AppText.b2b,
                   textAlign: TextAlign.center,
                 )
                     : Container(),
