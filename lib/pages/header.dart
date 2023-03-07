@@ -26,11 +26,8 @@ class HeaderScreen extends StatelessWidget {
           child: VStack([
             100.heightBox,
             ZStack([
-
               Row(
                   children: [
-
-              //PictureWidget(),
               VStack([
                 30.heightBox,
                 nameWidget,
@@ -50,20 +47,11 @@ class HeaderScreen extends StatelessWidget {
               child: "My Resume".richText.make(),
             ).h(50)
 
-
               ]).pSymmetric(
                 //verschiebung von Header in breite
-                h: context.percentWidth * 0.5,
+                h: context.percentWidth * 0.8,
                 v: 1
               ),
-              // Expanded(
-              //     child:
-              // VStack([
-              //   "Über mich".text.white.bold.xl4.widest.make(),
-              //   15.heightBox,
-              //   beschreibung.text.white.xl3.maxLines(5).make()
-              // ]).pOnly(left: 120).h(context.percentHeight * 60)
-              // )
 
             WidthBox(breite * 0.2),
             Expanded(child:
@@ -77,11 +65,9 @@ class HeaderScreen extends StatelessWidget {
               ]),
             ])
             )
-                  ])
-
+            ])
             ]).pOnly(left: 50).h(context.percentHeight * 60)
-
-        ])
+          ])
         ).width(breite).make());
   }
 }
@@ -96,6 +82,7 @@ class PictureWidget extends StatelessWidget {
         child: Image.asset("images/Schnurri.JPG",
         fit: BoxFit.cover,
         height: context.percentHeight * 20,
+          width: 200,
         ),
     );
     
