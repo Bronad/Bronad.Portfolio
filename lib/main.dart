@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
       title: 'Lars Franke',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.deepOrange,
         accentColor: Coolers.accentColor,
-        textTheme: GoogleFonts.pacificoTextTheme(),
+        textTheme: GoogleFonts.latoTextTheme() ,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
 

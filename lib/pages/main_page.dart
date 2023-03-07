@@ -2,7 +2,9 @@ import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/coolers.dart';
+import 'package:portfolio/pages/Projects.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'foooter.dart';
 
 import 'header.dart';
 
@@ -22,6 +24,8 @@ class _MainPageState extends State<MainPage> {
       color: Coolers.primaryColor,
       child: VStack([
         HeaderScreen(),
+        projects(),
+        FooterScreen()
 
 
       ]).scrollVertical(),
