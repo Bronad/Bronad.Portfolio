@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../coolers.dart';
@@ -25,10 +26,8 @@ class HeaderScreen extends StatelessWidget {
           child: VStack([
             100.heightBox,
             ZStack([
-              //PictureWidget(),
+
               Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
 
               //PictureWidget(),
@@ -39,11 +38,23 @@ class HeaderScreen extends StatelessWidget {
                 VxBox().color(Coolers.accentColor).size(breite * 0.2, 8).make().shimmer(),
                 50.heightBox,
                 appicons(),
+                50.heightBox,
+                MaterialButton(
+              onPressed: () {
+                launchUrl((Uri.parse("https://mtechviral.com")));
+              },
+              hoverColor: Vx.purple700,
+              shape: Vx.roundedSm,
+              color: Coolers.accentColor,
+              textColor: Coolers.primaryColor,
+              child: "My Resume".richText.make(),
+            ).h(50)
+
 
               ]).pSymmetric(
                 //verschiebung von Header in breite
-                h: context.percentWidth * 3,
-                v: 32
+                h: context.percentWidth * 0.5,
+                v: 1
               ),
               // Expanded(
               //     child:
@@ -53,8 +64,6 @@ class HeaderScreen extends StatelessWidget {
               //   beschreibung.text.white.xl3.maxLines(5).make()
               // ]).pOnly(left: 120).h(context.percentHeight * 60)
               // )
-
-
 
             WidthBox(breite * 0.2),
             Expanded(child:
@@ -66,14 +75,14 @@ class HeaderScreen extends StatelessWidget {
               15.heightBox,
               beschreibung.text.white.xl3.maxLines(5).make()
               ]),
-
             ])
-            )])
+            )
+                  ])
 
-            ]).pOnly(left: 120).h(context.percentHeight * 60)
+            ]).pOnly(left: 50).h(context.percentHeight * 60)
 
         ])
-        ).make());
+        ).width(breite).make());
   }
 }
 
@@ -84,7 +93,7 @@ class PictureWidget extends StatelessWidget {
     return Transform(
         transform: Matrix4.rotationY(pi),
         alignment: Alignment.center,
-        child: Image.asset("images/kek.jpg",
+        child: Image.asset("images/Schnurri.JPG",
         fit: BoxFit.cover,
         height: context.percentHeight * 20,
         ),

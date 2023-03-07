@@ -1,5 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/coolers.dart';
+import 'package:portfolio/widgets/project_SPE.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class projects extends StatelessWidget {
@@ -9,12 +13,20 @@ class projects extends StatelessWidget {
     return Material(
       color: Coolers.secondaryColor,
       child:
-        Flex(direction: context.isMobile ? Axis.vertical : Axis.horizontal,
+        Flex(direction: Axis.horizontal,
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          VStack([
             "Projects \n".richText.withTextSpanChildren(["Selected Projects".textSpan.yellow400.make()]).xl4.make(),
-          20.widthBox,
+          40.heightBox,
+          HStack([
+            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_projet()),
+            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_projet()),
+            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_projet()),
+            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_projet())
+          ])
+          ])
         ],
       ).p64().h(context.isMobile ? 800 : 800),
 
@@ -24,19 +36,40 @@ class projects extends StatelessWidget {
 
 class ProjectWidget extends StatelessWidget {
   final String title;
-  const ProjectWidget({Key? key, required this.title}) : super(key: key);
+  final String picture;
+  final Widget URL;
+  const ProjectWidget({Key? key, required this.title, required this.picture, required this.URL}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return title.text.bold.white.xl.wide.center
-        .make()
-        .box
-        .p8
-        .roundedLg
-        .neumorphic(color: Vx.purple700, elevation: 5, curve: VxCurve.flat)
-        .alignCenter
-        .square(200)
-        .make()
-        .p16();
+
+    return MaterialButton(
+      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => URL));},
+      child: ZStack([
+        Transform(
+          transform: Matrix4.rotationY(pi),
+          alignment: Alignment.center,
+          child: Image.asset(picture,
+            fit: BoxFit.cover,
+          ),
+        ).w(400),
+      VStack([
+        title.text.bold.white.xl2.wide.center.make(),
+        20.heightBox
+      ])
+      ]).w(400).h(200).backgroundColor(Coolers.primaryColor)
+    );
+
+
+    // return title.text.bold.white.xl.wide.center
+    //     .make()
+    //     .box
+    //     .p8
+    //     .roundedLg
+    //     .neumorphic(color: Vx.purple700, elevation: 5, curve: VxCurve.flat)
+    //     .alignCenter
+    //     .square(200)
+    //     .make()
+    //     .p16();
   }
 }
