@@ -7,6 +7,7 @@ import 'package:portfolio/widgets/project_SPE.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../Table.dart';
 import '../widgets/GameofLife.dart';
 import '../widgets/project_ANI.dart';
 
@@ -24,13 +25,17 @@ class projects extends StatelessWidget {
           VStack([
             "Projects \n".richText.withTextSpanChildren(["Selected Projects".textSpan.yellow400.make()]).xl4.make(),
           40.heightBox,
-          HStack([
+          Expanded(
+              child: ThreeItemsTable(
+                  items: [
             ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_project()),
             ProjectWidget(title: "Auto Modellierung", picture: "images/kek.jpg", URL: cgr_project()),
             ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/kek.jpg", URL: ani_project()),
-            ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
+                    ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
+                    ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
+                    ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
 
-          ]).scrollVertical()
+          ])).w(MediaQuery.of(context).size.width * 0.8)
           ])
         ],
       ).p64().h(context.isMobile ? 800 : 800),

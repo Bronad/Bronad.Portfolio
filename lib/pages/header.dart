@@ -46,8 +46,8 @@ class HeaderScreen extends StatelessWidget {
               textColor: Coolers.primaryColor,
               child: "My Resume".richText.make(),
             ).h(50)
-
-              ]).pSymmetric(
+                //TODO: scale muss ich nochmal dran
+              ]).scale(scaleValue: 1.5).centered().pSymmetric(
                 //verschiebung von Header in breite
                 h: context.percentWidth * 0.8,
                 v: 1
