@@ -7,6 +7,9 @@ import 'package:portfolio/widgets/project_SPE.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
+import '../widgets/GameofLife.dart';
+import '../widgets/project_ANI.dart';
+
 class projects extends StatelessWidget {
 
   @override
