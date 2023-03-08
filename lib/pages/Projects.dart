@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:portfolio/coolers.dart';
+import 'package:portfolio/widgets/project_CGR.dart';
 import 'package:portfolio/widgets/project_SPE.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -21,11 +22,12 @@ class projects extends StatelessWidget {
             "Projects \n".richText.withTextSpanChildren(["Selected Projects".textSpan.yellow400.make()]).xl4.make(),
           40.heightBox,
           HStack([
-            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_projet()),
-            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_projet()),
-            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_projet()),
-            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_projet())
-          ])
+            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_project()),
+            ProjectWidget(title: "Auto Modellierung", picture: "images/kek.jpg", URL: cgr_project()),
+            ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/kek.jpg", URL: ani_project()),
+            ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
+
+          ]).scrollVertical()
           ])
         ],
       ).p64().h(context.isMobile ? 800 : 800),
@@ -57,7 +59,7 @@ class ProjectWidget extends StatelessWidget {
         title.text.bold.white.xl2.wide.center.make(),
         20.heightBox
       ])
-      ]).w(400).h(200).backgroundColor(Coolers.primaryColor)
+      ]).w(400).h(250).backgroundColor(Coolers.primaryColor)
     );
 
 

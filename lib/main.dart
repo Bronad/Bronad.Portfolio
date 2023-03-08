@@ -3,7 +3,9 @@ import 'package:portfolio/coolers.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/pages/main_page.dart';
 
-void main() {
+Future<void> main() async {
+
+
   runApp(const MyApp());
 }
 

@@ -1,5 +1,5 @@
 import 'dart:math';
-
+import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -13,9 +13,9 @@ import '../widgets/appicons.dart';
 class HeaderScreen extends StatelessWidget {
 
 
-
   @override
   Widget build(BuildContext context) {
+
 
     var nameWidget = "Lars\nFranke".text.white.xl6.lineHeight(1).size(context.isMobile ?15:20).bold.make();
     var beschreibung = "Ich bin Lars Franke, 23 Jahre alt und studiere an Westfälischen Hoschschule Geslenkirchen aktuelle Medieninformatik. Ich suche aktuell ein spannedes Praktikum & einen Job! Ich sollte mein Stuidum gegen Ende 2023 / Anfang 2024 beendet haben. Ich ";
@@ -38,7 +38,7 @@ class HeaderScreen extends StatelessWidget {
                 50.heightBox,
                 MaterialButton(
               onPressed: () {
-                launchUrl((Uri.parse("https://mtechviral.com")));
+                launchUrl((Uri.parse("https://drive.google.com/file/d/1KIDlpL5eSURPeTJW9Qh7x9Lc1FmfK52y/view?usp=share_link")));
               },
               hoverColor: Vx.purple700,
               shape: Vx.roundedSm,
@@ -88,4 +88,6 @@ class PictureWidget extends StatelessWidget {
     
   }
 }
+
+
 

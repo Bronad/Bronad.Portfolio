@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/coolers.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class spe_projet extends StatelessWidget {
+class spe_project extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
