@@ -8,9 +8,9 @@ class ThreeItemsTable extends StatelessWidget {
 
   ThreeItemsTable({
     required this.items,
-    this.itemHeight = 240,
-    this.itemWidth = 180,
-    this.spacing = 25,
+    this.itemHeight = 370,
+    this.itemWidth = 400,
+    this.spacing = 50,
   });
 
   @override

@@ -29,16 +29,15 @@ class projects extends StatelessWidget {
               child: ThreeItemsTable(
                   items: [
             ProjectWidget(title: "Der Zauberlehrling", picture: "images/Background.png", URL: spe_project()),
-            ProjectWidget(title: "Auto Modellierung", picture: "images/kek.jpg", URL: cgr_project()),
-            ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/kek.jpg", URL: ani_project()),
-                    ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
-                    ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
-                    ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
-
+            ProjectWidget(title: "Auto Modellierung", picture: "images/CGR_bg.png", URL: cgr_project()),
+            ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/Ani_bild1.jpg", URL: ani_project()),
+                    ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/Logo_Game_of_Life.png", URL: gameofLife()),
+                    const Placeholder(),
+                    const Placeholder(),
           ])).w(MediaQuery.of(context).size.width * 0.8)
           ])
         ],
-      ).p64().h(context.isMobile ? 800 : 800),
+      ).p64().h(context.isMobile ? 1200 : 1200),
 
     );
   }
@@ -55,19 +54,17 @@ class ProjectWidget extends StatelessWidget {
 
     return MaterialButton(
       onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => URL));},
-      child: ZStack([
+      child: VStack([
+        title.text.bold.white.xl2.wide.center.make(),
+        20.heightBox,
         Transform(
           transform: Matrix4.rotationY(pi),
           alignment: Alignment.center,
           child: Image.asset(picture,
             fit: BoxFit.cover,
           ),
-        ).w(400),
-      VStack([
-        title.text.bold.white.xl2.wide.center.make(),
-        20.heightBox
-      ])
-      ]).w(400).h(250).backgroundColor(Coolers.primaryColor)
+        ).w(400).h(300),
+      ]).w(400).backgroundColor(Coolers.primaryColor)
     );
 
 
