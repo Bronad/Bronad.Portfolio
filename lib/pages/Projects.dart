@@ -28,7 +28,7 @@ class projects extends StatelessWidget {
           Expanded(
               child: ThreeItemsTable(
                   items: [
-            ProjectWidget(title: "Der Zauberlehrling", picture: "images/kek.jpg", URL: spe_project()),
+            ProjectWidget(title: "Der Zauberlehrling", picture: "images/Background.png", URL: spe_project()),
             ProjectWidget(title: "Auto Modellierung", picture: "images/kek.jpg", URL: cgr_project()),
             ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/kek.jpg", URL: ani_project()),
                     ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/kek.jpg", URL: gameofLife()),
