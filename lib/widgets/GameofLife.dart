@@ -8,18 +8,16 @@ class gameofLife extends StatelessWidget {
   Widget build(BuildContext context) {
 
     String bildbg = "images/Background.png";
-    String bild1 = "images/SPE_strat.png";
+    String bild1 = "images/Game_of_life_bild1";
     String bild2 = "images/spe_schlüssel.png";
     double breite = MediaQuery.of(context).size.width;
     double hoehe = MediaQuery.of(context).size.height;
-    String title = "Der Zauberlehrling";
-    String Text1 = "Dieses kleine Spiel entstand aus einem Praktikum aus dem Modul Spieleentwickelung \nEs ist ein kleines Puzzel Adventure und erstellt wurde das Spiel in der Unreal Engine 5 \nMan spielt einen Zauberlehrling welcher die Küche Putzen muss. Anstatt dies per Hand zu erlediegen, möchte er ein Buch vom Zaubermeister klauen damit sich die Arbeit von selbst erledigt.";
-
+    String title = "Game of Life\nEin Spiel für Informatiker*innen";
+    String Text1 = "Dieses Projekt entstand in Zusammenarbeit mit einer Projektgruppe im Rahmen des verpflichtendem Softwareprojekts.\nWir erstellten auf Basis eines Prototypen ein Spiel in dem Spielende einen Algorythmus Programmieren der gegen andere antritt.\nDiese Algorythmen steuern Agenten die dan in einer Arena gegeneinander.\nNach einer bestimmten Rundenanzahl gewinnt der/die jenige mit den meisten Agenten.";
     return Scaffold(
 
         floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
         body:ZStack([
-          Expanded(child: Image.asset(bildbg)),
           Center(child:
           VStack([
             title.richText.xl6.bold.color(Coolers.accentColor).make(),
@@ -27,15 +25,13 @@ class gameofLife extends StatelessWidget {
             VxBox().color(Coolers.accentColor).size(breite * 0.2, 6).make().shimmer(),
             50.heightBox,
             Expanded(child: Image.asset(bild1)),
-            "LUL".text.xl3.make(),
             50.heightBox,
             Text1.text.xl3.color(Colors.white).make(),
             50.heightBox,
-            Expanded(child: Image.asset(bild2))
 
           ]).centered().w(breite * 0.5),
           ),
-        ]).w(breite).h(hoehe),
+        ]).w(breite).h(hoehe).backgroundColor(Coolers.secondaryColor),
 
         floatingActionButton: FloatingActionButton(
           onPressed:() {Navigator.pop(context);},

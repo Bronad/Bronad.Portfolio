@@ -19,24 +19,26 @@ class spe_project extends StatelessWidget {
 
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
       body:ZStack([
-        Expanded(child: Image.asset(bildbg)),
+        //Expanded(child: Image.asset(bildbg)),
           Center(child: 
       VStack([
         title.richText.xl6.bold.color(Coolers.accentColor).make(),
         30.heightBox,
         VxBox().color(Coolers.accentColor).size(breite * 0.2, 6).make().shimmer(),
         50.heightBox,
-        Expanded(child: Image.asset(bild1)),
-        "LUL".text.xl3.make(),
+        HStack([
+          Expanded(child: Image.asset(bild1)),
+          Expanded(child: Image.asset(bild2))]).w(breite * 0.8).h(hoehe * 0.6)
+        ,
+
         50.heightBox,
         Text1.text.xl3.color(Colors.white).make(),
         50.heightBox,
-        Expanded(child: Image.asset(bild2))
 
 
       ]).centered().w(breite * 0.5),
           ),
-      ]).w(breite).h(hoehe),
+      ]).w(breite).h(hoehe).backgroundColor(Coolers.secondaryColor),
 
       floatingActionButton: FloatingActionButton(
           onPressed:() {Navigator.pop(context);},

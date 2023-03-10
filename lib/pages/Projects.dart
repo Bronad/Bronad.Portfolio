@@ -30,7 +30,7 @@ class projects extends StatelessWidget {
                   items: [
             ProjectWidget(title: "Der Zauberlehrling", picture: "images/Background.png", URL: spe_project()),
             ProjectWidget(title: "Auto Modellierung", picture: "images/CGR_bg.png", URL: cgr_project()),
-            ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/Ani_bild1.jpg", URL: ani_project()),
+            ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/Ani_bild1.png", URL: ani_project()),
                     ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/Logo_Game_of_Life.png", URL: gameofLife()),
                     const Placeholder(),
                     const Placeholder(),

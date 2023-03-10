@@ -26,7 +26,6 @@ class cgr_project extends StatelessWidget {
             VxBox().color(Coolers.accentColor).size(breite * 0.2, 6).make().shimmer(),
             50.heightBox,
             Expanded(child: Image.asset(bild1)),
-            "LUL".text.xl3.make(),
             50.heightBox,
             Text1.text.xl3.color(Colors.white).make(),
             50.heightBox,
@@ -34,7 +33,7 @@ class cgr_project extends StatelessWidget {
 
           ]).centered().w(breite * 0.7),
           ),
-        ]).w(breite).h(hoehe),
+        ]).w(breite).h(hoehe).backgroundColor(Coolers.secondaryColor),
 
         floatingActionButton: FloatingActionButton(
           onPressed:() {Navigator.pop(context);},
