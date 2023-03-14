@@ -14,7 +14,9 @@ class ani_project extends StatelessWidget {
     double breite = MediaQuery.of(context).size.width;
     double hoehe = MediaQuery.of(context).size.height;
     String title = "Char Modellieren & Animieren";
+    String Text2 = "In this project I created a character in  low-poly style inspiered by the synthy poly Chasrs. This Mesh was then ainimated to Sit Down and stand up. The first time was done by hand and a second time based on motion capture. The looks of the character are inspiered by Caleb Widowgast of Critical Role ";
     String Text1 = "In diesem Projekt habe ich einen Charakter im Low-Poly Stil erstellt.\nDieser wurde dann auch verwendet um eine Animation zum hinsetzten und aufstehen zu erstellen.\nAls inspiration wurde der Charakter Caled Widowgast von Critical Role verwendet.";
+
     return Scaffold(
       backgroundColor: Coolers.secondaryColor,
         floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
@@ -25,14 +27,13 @@ class ani_project extends StatelessWidget {
             30.heightBox,
             VxBox().color(Coolers.accentColor).size(breite * 0.2, 6).make(),
             50.heightBox,
-            Expanded(child: Image.asset(bild1)),
+            HStack([
+              Expanded(child: Image.asset(bild1)),
+              Expanded(child: Image.asset(bild2))]),
             50.heightBox,
-            Text1.text.xl3.color(Colors.white).make(),
+            Text2.text.xl3.color(Colors.white).make(),
             50.heightBox,
-            Expanded(child: Image.asset(bild2))
-
-
-          ]).centered().w(breite * 0.5),
+          ]).centered().w(breite * 0.7),
           ),
         ]).w(breite).h(hoehe).backgroundColor(Coolers.secondaryColor),
 

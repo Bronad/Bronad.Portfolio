@@ -28,7 +28,7 @@ class HeaderScreen extends StatelessWidget {
 
     var nameWidget = "Lars\nFranke".text.white.xl6.lineHeight(1).size(context.isMobile ?18:24).bold.make();
     var beschreibungEN = "Ich bin Lars Franke, 23 Jahre alt und studiere an Westfälischen Hoschschule Geslenkirchen aktuelle Medieninformatik. Ich suche aktuell ein spannedes Praktikum & einen Job! Ich sollte mein Stuidum gegen Ende 2023 / Anfang 2024 beendet haben. Ich ";
-    var beschreibungen = "I am Lars Franke, a 23 year old media Informatics student at Westfälische Hochschule Gelsenkirchen. I am currently on the lookout for an internship and an part-time Job that can be managed next to my Masters Study. I am going to finish my Bachelor around the end of 2023 / beginning of 2024.";
+    var beschreibungen = "I am Lars Franke, a 23 year old media Informatics student at Westfälische Hochschule Gelsenkirchen. I am currently on the lookout for an internship and an part-time Job that can be managed along with my Masters Study. I am going to finish my Bachelor around the end of 2023 / beginning of 2024.";
     var breite = MediaQuery.of(context).size.width;
 
     return SafeArea(
@@ -55,9 +55,9 @@ class HeaderScreen extends StatelessWidget {
               hoverColor: Vx.purple700,
               shape: Vx.roundedSm,
               color: Coolers.accentColor,
-              textColor: Coolers.primaryColor,
-              child: "My Resume".richText.make(),
-            ).h(50)
+              textColor: Colors.white,    //Coolers.primaryColor,
+              child: "My Resume".richText.size(18).make(),
+            ).h(80).w(120)
               ]).pSymmetric(
                 //verschiebung von Header in breite
                 h: context.percentWidth * 0.8,
@@ -73,7 +73,7 @@ class HeaderScreen extends StatelessWidget {
               VStack([
               "About Me".text.white.bold.xl4.widest.make(),
               15.heightBox,
-                (beschreibungen).text.white.xl3.maxLines(5).make()
+                (beschreibungen).text.white.xl3.maxLines(7).make()
               ]),
             ])
             ),

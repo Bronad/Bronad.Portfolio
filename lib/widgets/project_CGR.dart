@@ -12,7 +12,8 @@ class cgr_project extends StatelessWidget {
     String bild2 = "images/spe_schlüssel.png";
     double breite = MediaQuery.of(context).size.width;
     double hoehe = MediaQuery.of(context).size.height;
-    String title = "Auto Modellieren";
+    String title = "Car Modelling";
+    String Text2 = "This project was one of my first created objects in Blender on the Basis of a drawn car. It's meant to be in low-poly-style and is textured via UV-mapping.";
     String Text1 = "Dieses kleine Spiel entstand aus einem Praktikum aus dem Modul Spieleentwickelung \nEs ist ein kleines Puzzel Adventure und erstellt wurde das Spiel in der Unreal Engine 5 \nMan spielt einen Zauberlehrling welcher die Küche Putzen muss. Anstatt dies per Hand zu erlediegen, möchte er ein Buch vom Zaubermeister klauen damit sich die Arbeit von selbst erledigt.";
 
     return Scaffold(
@@ -27,7 +28,7 @@ class cgr_project extends StatelessWidget {
             50.heightBox,
             Expanded(child: Image.asset(bild1)),
             50.heightBox,
-            Text1.text.xl3.color(Colors.white).make(),
+            Text2.text.xl3.color(Colors.white).make(),
             50.heightBox,
 
 

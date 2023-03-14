@@ -23,18 +23,18 @@ class projects extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           VStack([
-            "Projects \n".richText.withTextSpanChildren(["Selected Projects".textSpan.yellow400.make()]).xl4.make(),
+            "My Projects \n".richText.xl5.color(Colors.white).make(), //withTextSpanChildren(["Selected Projects".textSpan.yellow400.make()]).xl4.make(),
           40.heightBox,
           Expanded(
               child: ThreeItemsTable(
                   items: [
             ProjectWidget(title: "Der Zauberlehrling", picture: "images/Background.png", URL: spe_project()),
-            ProjectWidget(title: "Auto Modellierung", picture: "images/CGR_bg.png", URL: cgr_project()),
-            ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/Ani_bild1.png", URL: ani_project()),
-                    ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/Logo_Game_of_Life.png", URL: gameofLife()),
+            ProjectWidget(title: "car modelling", picture: "images/CGR_bg.png", URL: cgr_project()),
+            ProjectWidget(title: "character modelling\n and animate", picture: "images/Ani_bild1.png", URL: ani_project()),
+                    ProjectWidget(title: "Game of Life \n Software project", picture: "images/Logo_Game_of_Life.png", URL: gameofLife()),
                     30.widthBox ,
                     30.widthBox,
-          ])).w(MediaQuery.of(context).size.width * 0.8)
+          ])).w(MediaQuery.of(context).size.width * 0.85)
           ])
         ],
       ).p64().h(context.isMobile ? 1200 : 1200),
