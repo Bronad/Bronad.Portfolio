@@ -8,13 +8,13 @@ class appicons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return [
-      Icon(FontAwesomeIcons.twitter, color: Colors.white).mdClick(() {launchUrl(Uri.parse("https://twitter.com/Br0nad"));}).make(),
-      25.widthBox,
-      Icon(FontAwesomeIcons.twitch, color: Colors.white).mdClick(() {launchUrl(Uri.parse("https://www.twitch.tv/br0nad"));}).make(),
-      25.widthBox,
-      Icon(FontAwesomeIcons.linkedin, color: Colors.white).mdClick(() {launchUrl(Uri.parse("https://www.linkedin.com/in/lars-franke-762635258/"));}).make(),
-      25.widthBox,
-      Icon(FontAwesomeIcons.github, color: Colors.white).mdClick(() {launchUrl(Uri.parse("https://github.com/Bronad"));}).make(),
+      Icon(FontAwesomeIcons.twitter, color: Colors.white, size: 50,).mdClick(() {launchUrl(Uri.parse("https://twitter.com/Br0nad"));}).make(),
+      50.widthBox,
+      // Icon(FontAwesomeIcons.twitch, color: Colors.white).scale110().mdClick(() {launchUrl(Uri.parse("https://www.twitch.tv/br0nad"));}).make(),
+      // 25.widthBox,
+      Icon(FontAwesomeIcons.linkedin, color: Colors.white, size: 50,).mdClick(() {launchUrl(Uri.parse("https://www.linkedin.com/in/lars-franke-762635258/"));}).make(),
+      50.widthBox,
+      Icon(FontAwesomeIcons.github, color: Colors.white, size: 50,).mdClick(() {launchUrl(Uri.parse("https://github.com/Bronad"));}).make(),
     ].hStack();
   }
 }

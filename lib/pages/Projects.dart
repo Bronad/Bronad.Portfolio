@@ -32,8 +32,8 @@ class projects extends StatelessWidget {
             ProjectWidget(title: "Auto Modellierung", picture: "images/CGR_bg.png", URL: cgr_project()),
             ProjectWidget(title: "Charakter Modellieren\n und Animieren", picture: "images/Ani_bild1.png", URL: ani_project()),
                     ProjectWidget(title: "Game of Life \n Software Projekt", picture: "images/Logo_Game_of_Life.png", URL: gameofLife()),
-                    const Placeholder(),
-                    const Placeholder(),
+                    30.widthBox ,
+                    30.widthBox,
           ])).w(MediaQuery.of(context).size.width * 0.8)
           ])
         ],
@@ -54,7 +54,8 @@ class ProjectWidget extends StatelessWidget {
 
     return MaterialButton(
       onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => URL));},
-      child: VStack([
+      child:
+      VStack([
         title.text.bold.white.xl2.wide.center.make(),
         20.heightBox,
         Transform(

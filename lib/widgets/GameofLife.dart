@@ -8,7 +8,7 @@ class gameofLife extends StatelessWidget {
   Widget build(BuildContext context) {
 
     String bildbg = "images/Background.png";
-    String bild1 = "images/Game_of_life_bild1";
+    String bild1 = "images/Game_of_life_bild1.png";
     String bild2 = "images/spe_schlüssel.png";
     double breite = MediaQuery.of(context).size.width;
     double hoehe = MediaQuery.of(context).size.height;

@@ -50,7 +50,8 @@ class FooterScreen extends StatelessWidget {
         "Thanks for your interest, ".richText.semiBold.white.withTextSpanChildren(
             ["that's all folks.".textSpan.gray500.make()]).make(),
         25.heightBox,
-        appicons().scale(scaleValue: 1.5),
+        //appicons().scale(scaleValue: 1.5),
+        appicons(),
         30.heightBox,
 
       ],
