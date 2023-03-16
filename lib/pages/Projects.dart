@@ -52,11 +52,13 @@ class ProjectWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialButton(
+    return
+      MaterialButton(
       onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => URL));},
       child:
       VStack([
-        title.text.bold.white.xl2.wide.center.make(),
+        Center(child:
+        title.text.bold.white.xl2.wide.center.make(),),
         20.heightBox,
         Transform(
           transform: Matrix4.rotationY(pi),

@@ -30,8 +30,6 @@ class cgr_project extends StatelessWidget {
             50.heightBox,
             Text2.text.xl3.color(Colors.white).make(),
             50.heightBox,
-
-
           ]).centered().w(breite * 0.7),
           ),
         ]).w(breite).h(hoehe).backgroundColor(Coolers.secondaryColor),

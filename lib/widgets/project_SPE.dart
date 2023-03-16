@@ -29,14 +29,11 @@ class spe_project extends StatelessWidget {
         50.heightBox,
         HStack([
           Expanded(child: Image.asset(bild1)),
-          Expanded(child: Image.asset(bild2))]).w(breite * 0.8).h(hoehe * 0.6)
+          Expanded(child: Image.asset(bild2))]).w(breite * 0.8).h(hoehe * 0.4)
         ,
-
         50.heightBox,
         text2.text.xl3.color(Colors.white).make(),
         50.heightBox,
-
-
       ]).centered().w(breite * 0.7),
           ),
       ]).w(breite).h(hoehe).backgroundColor(Coolers.secondaryColor),
