@@ -7,8 +7,6 @@ mixin Coolers{
   static const Color secondaryColor = Color(0xff333645);
 
   static const Color white = Vx.white;
-
-
-  static Color accentColor = Vx.purple400;
+  static const Color accentColor = Vx.purple400;
 
 }

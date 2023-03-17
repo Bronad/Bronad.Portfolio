@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/coolers.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'ytplayer.dart';
 
 class spe_project extends StatelessWidget {
 
@@ -27,17 +28,17 @@ class spe_project extends StatelessWidget {
         30.heightBox,
         VxBox().color(Coolers.accentColor).size(breite * 0.2, 6).make().shimmer(),
         50.heightBox,
-        HStack([
-          Expanded(child: Image.asset(bild1)),
-          Expanded(child: Image.asset(bild2))]).w(breite * 0.8).h(hoehe * 0.4)
-        ,
+        // HStack([
+        //   Expanded(child: Image.asset(bild1)),
+        //   Expanded(child: Image.asset(bild2))]).w(breite * 0.8).h(hoehe * 0.4)
+        // ,
+        ytplay(),
         50.heightBox,
         text2.text.xl3.color(Colors.white).make(),
         50.heightBox,
       ]).centered().w(breite * 0.7),
           ),
       ]).w(breite).h(hoehe).backgroundColor(Coolers.secondaryColor),
-
       floatingActionButton: FloatingActionButton(
           onPressed:() {Navigator.pop(context);},
           child: Icon(Icons.arrow_back),

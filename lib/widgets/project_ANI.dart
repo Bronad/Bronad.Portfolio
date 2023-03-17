@@ -25,7 +25,7 @@ class ani_project extends StatelessWidget {
           VStack([
             title.richText.xl6.bold.color(Coolers.accentColor).make(),
             30.heightBox,
-            VxBox().color(Coolers.accentColor).size(breite * 0.2, 6).make(),
+            VxBox().color(Coolers.accentColor).size(breite * 0.2, 6).make().shimmer(),
             50.heightBox,
             HStack([
               Expanded(child: Image.asset(bild1)),

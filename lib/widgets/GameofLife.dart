@@ -14,7 +14,7 @@ class gameofLife extends StatelessWidget {
     double hoehe = MediaQuery.of(context).size.height;
     String title2 = "Game of Life\nA Game for IT-Students";
     String title = "Game of Life\nEin Spiel für Informatiker*innen";
-    String Text2 = "This project was created in a team of students as part of an mandatory software project. We created a game, where players will have to program an algorithm that will oppose other algorithms. These Algorithms control Agents which move an interact with the map. Whoever has the most Agents or the most energy after a set amount of played rounds, wins the game.";
+    String Text2 = "This project was created in a team of students as part of an mandatory software project. We created a game, where players will have to program an algorithm that will oppose other algorithms. These Algorithms control Agents which move an interact with the map. Whoever has the most Agents or the most energy after a set amount of played rounds, wins the game. We also created a Map Creator to let everyone create maps.\nA big part of my work was in the Frontend, as we created one Version in JavaFX and one in Flutter. ";
     String Text1 = "Dieses Projekt entstand in Zusammenarbeit mit einer Projektgruppe im Rahmen des verpflichtendem Softwareprojekts.\nWir erstellten auf Basis eines Prototypen ein Spiel in dem Spielende einen Algorythmus Programmieren der gegen andere antritt.\nDiese Algorythmen steuern Agenten die dan in einer Arena gegeneinander.\nNach einer bestimmten Rundenanzahl gewinnt der/die jenige mit den meisten Agenten.";
 
     return Scaffold(
