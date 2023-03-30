@@ -1,6 +1,9 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/coolers.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class ytplay extends StatefulWidget {
@@ -13,18 +16,18 @@ class ytplay extends StatefulWidget {
 
 class _ytplayState extends State<ytplay> {
 
-  final videoURL = "https://www.youtube.com/watch?v=7sAjRqJP0vw";
+  final url = 'https://www.youtube.com/watch?v=7sAjRqJP0vw';
+
 
   late YoutubePlayerController _controller;
 
   @override
   void initState() {
-    final videoID = YoutubePlayer.convertUrlToId(videoURL);
+    super.initState();
+    final videoID = YoutubePlayer.convertUrlToId(url);
     _controller = YoutubePlayerController(
         initialVideoId: videoID!,
-    flags: const YoutubePlayerFlags(autoPlay: false));
-
-    super.initState();
+        flags: const YoutubePlayerFlags(autoPlay: false));
   }
 
   @override

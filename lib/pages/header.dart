@@ -28,7 +28,7 @@ class HeaderScreen extends StatelessWidget {
 
     var nameWidget = "Lars\nFranke".text.white.xl6.lineHeight(1).size(context.isMobile ?18:24).bold.make();
     var beschreibungEN = "Ich bin Lars Franke, 23 Jahre alt und studiere an Westfälischen Hoschschule Geslenkirchen aktuelle Medieninformatik. Ich suche aktuell ein spannedes Praktikum & einen Job! Ich sollte mein Stuidum gegen Ende 2023 / Anfang 2024 beendet haben. Ich ";
-    var beschreibungen = "I am Lars Franke, a 23 year old media Informatics student at Westfälische Hochschule Gelsenkirchen. I am currently on the lookout for an internship and an part-time Job that can be managed along with my Masters Study. I am going to finish my Bachelor around the end of 2023 / beginning of 2024.";
+    var beschreibungen = "I am Lars Franke, a 23-year-old media Informatics student at Westfälische Hochschule Gelsenkirchen. I am currently on the lookout for an internship and a part-time Job that can be managed along with my Masters Study. I am going to finish my Bachelor around the end of 2023 / beginning of 2024.";
     var breite = MediaQuery.of(context).size.width;
 
     return SafeArea(
@@ -50,7 +50,7 @@ class HeaderScreen extends StatelessWidget {
                 50.heightBox,
                 MaterialButton(
               onPressed: () {
-                launchUrl((Uri.parse("https://drive.google.com/file/d/1KIDlpL5eSURPeTJW9Qh7x9Lc1FmfK52y/view?usp=share_link")));
+                launchUrl((Uri.parse("https://drive.google.com/file/d/1Slg5qDgt1XoHMV1GqPPwtAAyyGEnWGyP/view?usp=share_link")));
               },
               hoverColor: Vx.purple700,
               shape: Vx.roundedSm,

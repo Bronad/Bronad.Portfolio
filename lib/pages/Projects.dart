@@ -10,6 +10,7 @@ import 'package:velocity_x/velocity_x.dart';
 import '../Table.dart';
 import '../widgets/GameofLife.dart';
 import '../widgets/project_ANI.dart';
+import '../widgets/project_SPE2.dart';
 
 class projects extends StatelessWidget {
 
