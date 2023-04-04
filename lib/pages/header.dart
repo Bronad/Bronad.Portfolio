@@ -92,7 +92,12 @@ class PictureWidget extends StatelessWidget {
     return Transform(
         transform: Matrix4.rotationY(pi),
         alignment: Alignment.center,
-        child: Image.asset("images/Schnurri.jpg",
+
+        // Author
+        // jake1808 commented on Mar 3, 2022
+        // Hello @maheshmnj I managed to fix the issue I changed the quotations to double quotations image: AssetImage("assets/images/circular_avatar_1.PNG"). Thank you.
+
+        child: Image.asset("assets/images/Schnurri.jpg",
         fit: BoxFit.cover,
         height: context.percentHeight * 20,
           width: 200,
