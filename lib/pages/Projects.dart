@@ -26,7 +26,7 @@ class projects extends StatelessWidget {
           VStack([
             "My Projects \n".richText.xl5.color(Colors.white).make(), //withTextSpanChildren(["Selected Projects".textSpan.yellow400.make()]).xl4.make(),
           40.heightBox,
-          Expanded(
+          Container(
               child: ThreeItemsTable(
                   items: [
             ProjectWidget(title: "Der Zauberlehrling", picture: "images/Background.png", URL: spe_project()),
@@ -64,10 +64,10 @@ class ProjectWidget extends StatelessWidget {
         Transform(
           transform: Matrix4.rotationY(pi),
           alignment: Alignment.center,
-          child: Image.asset(picture,
+          child:
+            Image(image: AssetImage(picture),
             fit: BoxFit.cover,
-          ),
-        ).w(400).h(300),
+            )).w(400).h(300),
       ]).w(400).backgroundColor(Coolers.primaryColor)
     );
 

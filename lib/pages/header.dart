@@ -30,58 +30,63 @@ class HeaderScreen extends StatelessWidget {
     var beschreibungEN = "Ich bin Lars Franke, 23 Jahre alt und studiere an Westfälischen Hoschschule Geslenkirchen aktuelle Medieninformatik. Ich suche aktuell ein spannedes Praktikum & einen Job! Ich sollte mein Stuidum gegen Ende 2023 / Anfang 2024 beendet haben. Ich ";
     var beschreibungen = "I am Lars Franke, a 23-year-old media Informatics student at Westfälische Hochschule Gelsenkirchen. I am currently on the lookout for an internship and a part-time Job that can be managed along with my Masters Study. I am going to finish my Bachelor around the end of 2023 / beginning of 2024.";
     var breite = MediaQuery.of(context).size.width;
+    var hoehe = MediaQuery.of(context).size.height;
 
     return SafeArea(
         child: VxBox(
-          child: VStack([
-            //lanbutton(),
-            //HStack([]),
-            100.heightBox,
-            ZStack([
-              Row(
-                  children: [
+          child: Stack(
+            children: [
+              FittedBox(
+                  fit: BoxFit.fill,
+                  child: Image(image: AssetImage("Images/Testen4.jpg"))),
               VStack([
-                30.heightBox,
-                nameWidget,
-                30.heightBox,
-                VxBox().color(Coolers.accentColor).size(breite * 0.25, 8).make().shimmer(),
-                50.heightBox,
-                appicons(),
-                50.heightBox,
-                MaterialButton(
-              onPressed: () {
-                launchUrl((Uri.parse("https://drive.google.com/file/d/1Slg5qDgt1XoHMV1GqPPwtAAyyGEnWGyP/view?usp=share_link")));
-              },
-              hoverColor: Vx.purple700,
-              shape: Vx.roundedSm,
-              color: Coolers.accentColor,
-              textColor: Colors.white,    //Coolers.primaryColor,
-              child: "My Resume".richText.size(18).make(),
-            ).h(80).w(120)
-              ]).pSymmetric(
-                //verschiebung von Header in breite
-                h: context.percentWidth * 0.8,
-                v: 1
-              ),
-            WidthBox(breite * 0.2),
-            Expanded(child:
-            VStack(alignment: MainAxisAlignment.end,
-                //crossAlignment: CrossAxisAlignment.end,
-                [
-              PictureWidget(),
-              40.heightBox,
-              VStack([
-              "About Me".text.white.bold.xl4.widest.make(),
-              15.heightBox,
-                (beschreibungen).text.white.xl3.maxLines(7).make()
-              ]),
-            ])
-            ),
-                    50.widthBox,
-            ])
-            ]).pOnly(left: 50).h(context.percentHeight * 60)
-          ])
-        ).width(breite).make());
+              //HStack([]),
+              100.heightBox,
+              ZStack([
+                Row(
+                    children: [
+                VStack([
+                  30.heightBox,
+                  nameWidget,
+                  30.heightBox,
+                  VxBox().color(Coolers.accentColor).size(breite * 0.25, 8).make().shimmer(),
+                  50.heightBox,
+                  appicons(),
+                  50.heightBox,
+                  MaterialButton(
+                onPressed: () {
+                  launchUrl((Uri.parse("https://drive.google.com/file/d/1Slg5qDgt1XoHMV1GqPPwtAAyyGEnWGyP/view?usp=share_link")));
+                },
+                hoverColor: Vx.purple700,
+                shape: Vx.roundedSm,
+                color: Coolers.accentColor,
+                textColor: Colors.white,    //Coolers.primaryColor,
+                child: "My Resume".richText.size(18).make(),
+              ).h(80).w(120)
+                ]).pSymmetric(
+                  //verschiebung von Header in breite
+                  h: context.percentWidth * 0.8,
+                  v: 1
+                ),
+              WidthBox(breite * 0.2),
+
+              VStack(alignment: MainAxisAlignment.end,
+                  crossAlignment: CrossAxisAlignment.end,
+                  [
+                //PictureWidget(),
+                    (hoehe * 0.4).heightBox,
+                VStack([
+                "About Me".text.white.bold.xl4.widest.make(),
+                15.heightBox,
+                  (beschreibungen).text.white.xl3.maxLines(7).make()
+                ]).color(Coolers.secondaryColor.withAlpha(150)).w(breite * 0.4),
+              ]), 50.widthBox,
+              ])
+              ]).pOnly(left: 50).h(context.percentHeight * 60)
+            ]),
+            ]
+          )
+        ).width(breite).height(hoehe * 0.8).make());
   }
 }
 
@@ -97,11 +102,15 @@ class PictureWidget extends StatelessWidget {
         // jake1808 commented on Mar 3, 2022
         // Hello @maheshmnj I managed to fix the issue I changed the quotations to double quotations image: AssetImage("assets/images/circular_avatar_1.PNG"). Thank you.
 
-        child: Image.asset("assets/images/Schnurri.jpg",
-        fit: BoxFit.cover,
-        height: context.percentHeight * 20,
-          width: 200,
-        ),
+        child: Image(
+            image : AssetImage("images/Schnurri.JPG"),
+             height: 300,
+             width: 200,)
+        // child: Image.asset("images/Schnurri.jpg",
+        // fit: BoxFit.cover,
+        // height: context.percentHeight * 20,
+        //   width: 200,
+        // ),
     );
     
   }
