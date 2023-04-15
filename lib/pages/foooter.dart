@@ -50,8 +50,6 @@ class FooterScreen extends StatelessWidget {
                   .rounded
                   .make().onTap(() {
                 launchUrl(Uri.parse("mailto:lars.franke.dev@gmail.com"));
-
-                //Code
               }),
             ],
             alignment: MainAxisAlignment.spaceAround,
@@ -64,7 +62,6 @@ class FooterScreen extends StatelessWidget {
         //appicons().scale(scaleValue: 1.5),
         appicons(),
         30.heightBox,
-
       ],
       crossAlignment: CrossAxisAlignment.center,
     ).wFull(context).p16();

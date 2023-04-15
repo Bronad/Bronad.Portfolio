@@ -38,7 +38,7 @@ class HeaderScreen extends StatelessWidget {
             children: [
               FittedBox(
                   fit: BoxFit.fill,
-                  child: Image(image: AssetImage("Images/Testen4.jpg"))),
+                  child: Image(image: AssetImage("images/Testen4.jpg"))),
               VStack([
               //HStack([]),
               100.heightBox,
@@ -66,7 +66,7 @@ class HeaderScreen extends StatelessWidget {
                 ]).pSymmetric(
                   //verschiebung von Header in breite
                   h: context.percentWidth * 0.8,
-                  v: 1
+                  v: 0
                 ),
               WidthBox(breite * 0.2),
 
@@ -76,17 +76,17 @@ class HeaderScreen extends StatelessWidget {
                 //PictureWidget(),
                     (hoehe * 0.4).heightBox,
                 VStack([
-                "About Me".text.white.bold.xl4.widest.make(),
+                "About Me".text.white.bold.xl4.size(context.isMobile ? 12 : 16).widest.make(),
                 15.heightBox,
-                  (beschreibungen).text.white.xl3.maxLines(7).make()
+                  (beschreibungen).text.white.size(context.isMobile ? 8 : 12).xl3.maxLines(7).make()
                 ]).color(Coolers.secondaryColor.withAlpha(150)).w(breite * 0.4),
-              ]), 50.widthBox,
+              ]).w(breite*0.4), 50.widthBox,
               ])
               ]).pOnly(left: 50).h(context.percentHeight * 60)
             ]),
             ]
           )
-        ).width(breite).height(hoehe * 0.8).make());
+        ).width(breite*1).height(hoehe * 0.8).make());
   }
 }
 
@@ -97,20 +97,10 @@ class PictureWidget extends StatelessWidget {
     return Transform(
         transform: Matrix4.rotationY(pi),
         alignment: Alignment.center,
-
-        // Author
-        // jake1808 commented on Mar 3, 2022
-        // Hello @maheshmnj I managed to fix the issue I changed the quotations to double quotations image: AssetImage("assets/images/circular_avatar_1.PNG"). Thank you.
-
         child: Image(
             image : AssetImage("images/Schnurri.JPG"),
              height: 300,
              width: 200,)
-        // child: Image.asset("images/Schnurri.jpg",
-        // fit: BoxFit.cover,
-        // height: context.percentHeight * 20,
-        //   width: 200,
-        // ),
     );
     
   }
