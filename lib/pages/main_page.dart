@@ -24,11 +24,9 @@ class _MainPageState extends State<MainPage> {
       color: Coolers.primaryColor,
       child: VStack([
         HeaderScreen(),
-        50.heightBox.color(Coolers.accentColor),
+        30.heightBox.color(Coolers.accentColor),
         projects(),
         FooterScreen()
-
-
       ]).scrollVertical(),
     );
   }

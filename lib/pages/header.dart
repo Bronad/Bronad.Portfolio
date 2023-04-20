@@ -38,7 +38,7 @@ class HeaderScreen extends StatelessWidget {
             children: [
               FittedBox(
                   fit: BoxFit.fill,
-                  child: Image(image: AssetImage("images/Testen4.jpg"))),
+                  child: Image(image: AssetImage("images/Testen5.jpg"))),
               VStack([
               //HStack([]),
               100.heightBox,
@@ -53,16 +53,31 @@ class HeaderScreen extends StatelessWidget {
                   50.heightBox,
                   appicons(),
                   50.heightBox,
-                  MaterialButton(
+
+                  Row(
+                    children: [
+                      MaterialButton(
                 onPressed: () {
-                  launchUrl((Uri.parse("https://drive.google.com/file/d/1Slg5qDgt1XoHMV1GqPPwtAAyyGEnWGyP/view?usp=share_link")));
+                      launchUrl((Uri.parse("https://drive.google.com/file/d/167fVq-QJz3JIQysZQGcJmaTH_-xIuA1U/view?usp=share_link")));
                 },
-                hoverColor: Vx.purple700,
+                hoverColor: Vx.gray200,
                 shape: Vx.roundedSm,
-                color: Coolers.accentColor,
-                textColor: Colors.white,    //Coolers.primaryColor,
-                child: "My Resume".richText.size(18).make(),
-              ).h(80).w(120)
+                textColor: Colors.white,    //Coolers.primaryColor, Image(image: AssetImage("images/engFlagge.jpg"))
+                child: VxBox(child: Center(child: "My Resume".richText.size(20).bold.make())).bgImage(DecorationImage(
+                        image: AssetImage("images/eng_Flagge.jpg"))).make()
+              ).h(150).w(175),
+                      30.widthBox,
+                      MaterialButton(
+                          onPressed: () {
+                            launchUrl((Uri.parse("https://drive.google.com/file/d/1gL00dE1JXEr4MOQq4fsbtCvydEmMNIz9/view?usp=share_link")));
+                          },
+                          hoverColor: Vx.gray200,
+                          shape: Vx.roundedSm,
+                          textColor: Colors.white,    //Coolers.primaryColor, Image(image: AssetImage("images/engFlagge.jpg"))
+                          child: VxBox(child: Center(child: "Lebenslauf".richText.size(20).bold.make())).bgImage(DecorationImage(image: AssetImage("images/Flagge.jpg"))).make()
+                      ).h(150).w(175),
+                    ],
+                  )
                 ]).pSymmetric(
                   //verschiebung von Header in breite
                   h: context.percentWidth * 0.8,
@@ -86,7 +101,7 @@ class HeaderScreen extends StatelessWidget {
             ]),
             ]
           )
-        ).width(breite*1).height(hoehe * 0.8).make());
+        ).width(breite).height(hoehe * 0.8).make());
   }
 }
 
