@@ -8,6 +8,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../Table.dart';
+import '../widgets/Cybersec.dart';
+import '../widgets/Desgins.dart';
 import '../widgets/GameofLife.dart';
 import '../widgets/project_ANI.dart';
 import '../widgets/project_SPE2.dart';
@@ -33,8 +35,8 @@ class projects extends StatelessWidget {
             ProjectWidget(title: "car modelling", picture: "images/CGR_bg.png", URL: cgr_project()),
             ProjectWidget(title: "character modelling\n and animate", picture: "images/Ani_bild1.png", URL: ani_project()),
                     ProjectWidget(title: "Game of Life \n Software project", picture: "images/Logo_Game_of_Life.png", URL: gameofLife()),
-                    30.widthBox ,
-                    30.widthBox,
+                    ProjectWidget(title: "Desgins", picture : "images/Schnurri.JPG", URL: Desgins()),
+                    ProjectWidget(title: "Cybersecuraty", picture: "images/kek.jpg", URL: Cybersec())
           ])).w(MediaQuery.of(context).size.width * 0.85)
           ])
         ],

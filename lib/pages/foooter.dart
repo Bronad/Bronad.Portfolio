@@ -29,7 +29,6 @@ class FooterScreen extends StatelessWidget {
                   .rounded
                   .make().onTap(() {
                     launchUrl(Uri.parse("mailto:lars.franke.dev@gmail.com"));
-
                     //Code
               })
             ],
