@@ -8,14 +8,13 @@ class Cybersec extends StatelessWidget {
   Widget build(BuildContext context) {
 
     String bildbg = "images/Background.png";
-    String bild1 = "images/Game_of_life_bild10 - Kopie.png";
-    String bild2 = "images/spe_schlüssel.png";
+    String bild1 = "images/Ghidra.png";
+    String bild2 = "images/jadx.png";
     double breite = MediaQuery.of(context).size.width;
     double hoehe = MediaQuery.of(context).size.height;
     String title2 = "Cybersecurity";
     String title = "Game of Life\nEin Spiel für Informatiker*innen";
-    String Text2 = "In the Sector of IT Security, I managed to accuire some Expierience as well. In the mudual Practical Securiety i was able to fill and practice the roll of penetration tester. I am looking forword to learn even more about this filed.";
-    String Text1 = "Dieses Projekt entstand in Zusammenarbeit mit einer Projektgruppe im Rahmen des verpflichtendem Softwareprojekts.\nWir erstellten auf Basis eines Prototypen ein Spiel in dem Spielende einen Algorythmus Programmieren der gegen andere antritt.\nDiese Algorythmen steuern Agenten die dan in einer Arena gegeneinander.\nNach einer bestimmten Rundenanzahl gewinnt der/die jenige mit den meisten Agenten.";
+    String Text2 = "I also managed to gain some experience in the IT Security Section. In the modal Practical Security, I was able to fill and practice the role of penetration tester. I analysed malware via a Decompiler like Jadx and learned to use Linux in a Vm, like Virtual Box. I am looking forward to learning even more about cybersecurity.";
 
     return Scaffold(
 
@@ -27,7 +26,9 @@ class Cybersec extends StatelessWidget {
             30.heightBox,
             VxBox().color(Coolers.accentColor).size(breite * 0.2, 6).make().shimmer(),
             50.heightBox,
-            Expanded(child: Image.asset(bild1)),
+            HStack([
+                 Expanded(child: Image.asset(bild1)),
+                 Expanded(child: Image.asset(bild2))]),
             50.heightBox,
             Text2.text.xl3.color(Colors.white).make(),
             50.heightBox,
