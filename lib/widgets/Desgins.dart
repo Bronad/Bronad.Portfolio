@@ -8,8 +8,8 @@ class Desgins extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    String bild1 = "";
-    String bild2 = "";
+    String bild1 = "Images/Zeichenfläche 1.png";
+    String bild2 = "Images/Jörg Cover Ebook 1.1.jpg";
     double breite = MediaQuery.of(context).size.width;
     double hoehe = MediaQuery.of(context).size.height;
     String title = "Desgins";
@@ -28,7 +28,7 @@ class Desgins extends StatelessWidget {
             50.heightBox,
              HStack([
                Expanded(child: Image.asset(bild1)),
-               Expanded(child: Image.asset(bild2))]),
+               Expanded(child: Image.asset(bild2)).h(950)]),
            /* Html(
               data: '<iframe width="1200"  height="675" src="https://www.youtube.com/embed/MDZ0kc4o5tc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; allowfullscreen"></iframe>',
             ),*/
