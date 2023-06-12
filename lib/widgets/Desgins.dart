@@ -8,8 +8,8 @@ class Desgins extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    String bild1 = "Images/Zeichenfläche 1.png";
-    String bild2 = "Images/Jörg Cover Ebook 1.1.jpg";
+    String bild1 = "images/Zeichenfläche 1.png";
+    String bild2 = "images/Jörg Cover Ebook 1.1.jpg";
     double breite = MediaQuery.of(context).size.width;
     double hoehe = MediaQuery.of(context).size.height;
     String title = "Desgins";

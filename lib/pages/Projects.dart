@@ -31,13 +31,13 @@ class projects extends StatelessWidget {
           Container(
               child: ThreeItemsTable(
                   items: [
-                    ProjectWidgetlink(title: "Frontend_Practice", picture: "Images/33-2-1.png", URL: "https://github.com/Bronad/PracticeFrontend"),
+                    ProjectWidgetlink(title: "Frontend_Practice", picture: "images/33-2-1.png", URL: "https://github.com/Bronad/PracticeFrontend"),
             ProjectWidget(title: "Der Zauberlehrling", picture: "images/Background.png", URL: spe_project()),
             ProjectWidget(title: "car modelling", picture: "images/CGR_bg.png", URL: cgr_project()),
             ProjectWidget(title: "character modelling\n and animate", picture: "images/Ani_bild1.png", URL: ani_project()),
                     ProjectWidget(title: "Game of Life \n Software project", picture: "images/Logo_Game_of_Life.png", URL: gameofLife()),
-                    ProjectWidget(title: "Desgins", picture : "Images/Zeichenfläche 1.png", URL: Desgins()),
-                    ProjectWidget(title: "Cybersecurity", picture: "Images/Ghidra.png", URL: Cybersec()),
+                    ProjectWidget(title: "Desgins", picture : "images/Zeichenfläche 1.png", URL: Desgins()),
+                    ProjectWidget(title: "Cybersecurity", picture: "images/Ghidra.png", URL: Cybersec()),
                     //ProjectWidgetwithoutURL(title: "This Site", picture: "Images/Plus_symbol.svg.png"),
                     Visibility(
                       child: Text("Gone"),
